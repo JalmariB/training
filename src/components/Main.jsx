@@ -8,17 +8,15 @@ export default class Main extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-     
-    }
+   
   }
 
   get(){
-    console.log('get function')
-    axios.get('localhost:8000/notes/5b3e55297f1be519980c61a5')
+    
+    axios.get('https://localhost:8000/notes/5b3e55297f1be519980c61a5/')
       .then(function (response) {
         // handle success
-        console.log(response);
+        console.log('response', response);
       })
       .catch(function (error) {
         // handle error
@@ -27,20 +25,17 @@ export default class Main extends Component {
       .then(function () {
         // always executed
       });
-  }
+  } 
 
 
   render() {
     this.get();
     return (
-     <section className="main-container">
-       moro
-     </section>
+     <div>
+       <p>moro</p>
+     </div>
       );
   }
 
 }
 
-
-
-//localhost:8000/notes/5b3e55297f1be519980c61a5/
